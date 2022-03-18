@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FullPhotoViewController" customModule="TMS___Lesson_12" customModuleProvider="target">
+            <connections>
+                <outlet property="avatarImage" destination="QJ7-TL-OuZ" id="JLK-UX-VKr"/>
+                <outlet property="photoImage" destination="egf-mw-Lvl" id="xM8-KO-LlD"/>
+                <outlet property="scrollView" destination="zwp-G0-Ron" id="pHp-hf-v6m"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QJ7-TL-OuZ">
+                    <rect key="frame" x="20" y="69" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="XXh-T7-K45"/>
+                        <constraint firstAttribute="height" constant="40" id="dBg-Qi-DPA"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tcn-4A-IU6">
+                    <rect key="frame" x="377" y="74" width="32" height="32"/>
+                    <state key="normal" image="supportButton"/>
+                </button>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zwp-G0-Ron">
+                    <rect key="frame" x="0.0" y="153" width="414" height="466"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="egf-mw-Lvl">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="466"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="egf-mw-Lvl" secondAttribute="bottom" id="7Sx-YS-izo"/>
+                        <constraint firstItem="egf-mw-Lvl" firstAttribute="leading" secondItem="zwp-G0-Ron" secondAttribute="leading" id="83v-oD-LAU"/>
+                        <constraint firstAttribute="trailing" secondItem="egf-mw-Lvl" secondAttribute="trailing" id="EfL-qE-gJx"/>
+                        <constraint firstItem="egf-mw-Lvl" firstAttribute="centerX" secondItem="zwp-G0-Ron" secondAttribute="centerX" id="OFo-8D-skN"/>
+                        <constraint firstItem="egf-mw-Lvl" firstAttribute="centerY" secondItem="zwp-G0-Ron" secondAttribute="centerY" id="ccO-Kb-ni5"/>
+                        <constraint firstItem="egf-mw-Lvl" firstAttribute="top" secondItem="zwp-G0-Ron" secondAttribute="top" id="pk6-md-xW8"/>
+                    </constraints>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKm-DI-N5f">
+                    <rect key="frame" x="170" y="717" width="75" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Увеличить">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="scaleButton:" destination="-1" eventType="touchUpInside" id="K2N-jh-rja"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="QJ7-TL-OuZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="9SA-UF-6IO"/>
+                <constraint firstItem="zwp-G0-Ron" firstAttribute="top" secondItem="QJ7-TL-OuZ" secondAttribute="bottom" constant="44" id="GGW-5P-iBq"/>
+                <constraint firstItem="zwp-G0-Ron" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Mel-wP-v5k"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zwp-G0-Ron" secondAttribute="bottom" constant="243" id="R6V-Yh-ECe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Tcn-4A-IU6" secondAttribute="trailing" constant="5" id="W18-Mv-Lix"/>
+                <constraint firstItem="Tcn-4A-IU6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="qTH-rE-GVp"/>
+                <constraint firstItem="zwp-G0-Ron" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="vkg-F0-fIw"/>
+                <constraint firstItem="QJ7-TL-OuZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="zIl-JE-Ojv"/>
+            </constraints>
+            <point key="canvasLocation" x="66.666666666666671" y="108.48214285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="supportButton" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

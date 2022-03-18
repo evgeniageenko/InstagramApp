@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="km5-KW-jId">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Tab Bar-->
+        <scene sceneID="gR1-Ww-28p">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBar" id="km5-KW-jId" customClass="MainTabBar" customModule="TMS___Lesson_12" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="1Vh-0h-NsE"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pFt-fD-Cfe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="tVn-I0-V8m"/>
+                        <segue destination="JWZ-B5-vkC" kind="relationship" relationship="viewControllers" id="s4A-9J-XcJ"/>
+                        <segue destination="9WP-jU-upl" kind="relationship" relationship="viewControllers" id="ZyL-6c-Sm0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PTs-eh-uFt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1091" y="-349"/>
+        </scene>
+        <!--Listing View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ListingViewController" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ListingViewController" customModule="TMS___Lesson_12" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TJo-pp-lSV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <tableView key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PI9-O0-DdL">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </tableView>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TJo-pp-lSV" secondAttribute="trailing" id="57g-eR-QdZ"/>
+                            <constraint firstItem="TJo-pp-lSV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ICw-Cb-iZf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TJo-pp-lSV" secondAttribute="bottom" id="fbO-x3-WbD"/>
+                            <constraint firstItem="TJo-pp-lSV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ovK-BE-kmN"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="h41-fJ-Rh6"/>
+                    <connections>
+                        <outlet property="tableView" destination="TJo-pp-lSV" id="wRK-AZ-upG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14" y="-350"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="No5-dP-l9g">
+            <objects>
+                <viewController storyboardIdentifier="ProfileCellViewController" id="9WP-jU-upl" customClass="ProfileViewController" customModule="TMS___Lesson_12" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XIQ-BC-7RN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eRe-SP-hk6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xAx-yp-CyX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eRe-SP-hk6" firstAttribute="top" secondItem="XIQ-BC-7RN" secondAttribute="top" id="8XL-Jz-ovB"/>
+                            <constraint firstItem="eRe-SP-hk6" firstAttribute="trailing" secondItem="xAx-yp-CyX" secondAttribute="trailing" id="gjj-ay-Asv"/>
+                            <constraint firstItem="eRe-SP-hk6" firstAttribute="leading" secondItem="xAx-yp-CyX" secondAttribute="leading" id="wt9-ny-2pn"/>
+                            <constraint firstItem="eRe-SP-hk6" firstAttribute="bottom" secondItem="xAx-yp-CyX" secondAttribute="bottom" id="x59-GX-ceV"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="2" title="" image="person.crop.square.fill" catalog="system" id="ltr-AY-Sap"/>
+                    <connections>
+                        <outlet property="tableViewProfile" destination="eRe-SP-hk6" id="HZt-gf-U3r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="irI-ou-oRG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1091" y="427"/>
+        </scene>
+        <!--Image Picker View Controller-->
+        <scene sceneID="eJT-LD-sUK">
+            <objects>
+                <viewController storyboardIdentifier="ImagePickerViewController" id="JWZ-B5-vkC" customClass="ImagePickerViewController" customModule="TMS___Lesson_12" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nDa-O6-ej7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdL-1G-xoS">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C85-9a-f3V">
+                                        <rect key="frame" x="0.0" y="156" width="414" height="293"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="MvH-Pa-oLM" appends="YES" id="4dh-h7-zUd"/>
+                                        </connections>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abS-t3-aL5">
+                                        <rect key="frame" x="153" y="563" width="109" height="30"/>
+                                        <state key="normal" title="Добавить">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addButtonAction:" destination="JWZ-B5-vkC" eventType="touchUpInside" id="F9H-DE-BRX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="C85-9a-f3V" firstAttribute="top" secondItem="hdL-1G-xoS" secondAttribute="top" constant="156" id="0Lm-35-wV3"/>
+                                    <constraint firstAttribute="bottom" secondItem="abS-t3-aL5" secondAttribute="bottom" constant="176" id="8fD-kF-ArT"/>
+                                    <constraint firstItem="abS-t3-aL5" firstAttribute="top" secondItem="C85-9a-f3V" secondAttribute="bottom" constant="114" id="EID-TT-U3Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="abS-t3-aL5" secondAttribute="trailing" constant="152" id="LDD-7x-WEQ"/>
+                                    <constraint firstItem="C85-9a-f3V" firstAttribute="leading" secondItem="hdL-1G-xoS" secondAttribute="leading" id="b6U-X0-gRn"/>
+                                    <constraint firstItem="abS-t3-aL5" firstAttribute="leading" secondItem="hdL-1G-xoS" secondAttribute="leading" constant="153" id="eGv-Wt-Tb1"/>
+                                    <constraint firstAttribute="trailing" secondItem="C85-9a-f3V" secondAttribute="trailing" id="fhw-Tw-vbO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ng4-bV-6op"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hdL-1G-xoS" firstAttribute="leading" secondItem="Ng4-bV-6op" secondAttribute="leading" id="BOX-F0-djU"/>
+                            <constraint firstItem="Ng4-bV-6op" firstAttribute="bottom" secondItem="hdL-1G-xoS" secondAttribute="bottom" id="F5l-yq-Ef9"/>
+                            <constraint firstItem="hdL-1G-xoS" firstAttribute="top" secondItem="Ng4-bV-6op" secondAttribute="top" id="bIG-jE-Dgq"/>
+                            <constraint firstItem="Ng4-bV-6op" firstAttribute="trailing" secondItem="hdL-1G-xoS" secondAttribute="trailing" id="mpi-Ym-eaQ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="1" title="" image="plus.app" catalog="system" id="Arp-Xf-1ER"/>
+                    <connections>
+                        <outlet property="addButton" destination="abS-t3-aL5" id="En3-Gi-hee"/>
+                        <outlet property="photoImage" destination="C85-9a-f3V" id="n5i-yv-P36"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1sp-aK-Z7u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="MvH-Pa-oLM">
+                    <connections>
+                        <action selector="oneTapRecognizer:" destination="JWZ-B5-vkC" id="okF-gg-Lzw"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-14.492753623188406" y="426.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="person.crop.square.fill" catalog="system" width="128" height="114"/>
+        <image name="plus.app" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
